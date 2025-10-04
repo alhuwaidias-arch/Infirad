@@ -149,28 +149,48 @@
         
         .pathway-diagram {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             margin-top: 60px;
             position: relative;
+            gap: 20px;
         }
         
         .pathway-phase {
             flex: 1;
             padding: 20px;
+            text-align: center;
+            position: relative;
         }
         
         .pathway-phase h3 {
             font-size: 1.8rem;
+            margin-bottom: 15px;
         }
         
         .pathway-phase p {
             font-size: 1rem;
+            text-align: left; /* Left align for English LTR */
+            margin: 0;
+            padding: 0 0 0 50px; /* Left padding to create space */
+            line-height: 1.6;
+            padding-left: 50px; /* Proper spacing for bullet alignment */
+        }
+        
+        /* Custom bullet positioning for English */
+        .pathway-phase p::before {
+            content: '';
+            position: absolute;
+            left: 25px; /* Position bullets under "P" */
+            color: inherit;
         }
         
         .pathway-arrow {
             font-size: 3rem;
             color: var(--cool-gray);
+            flex-shrink: 0;
+            width: 60px;
+            text-align: center;
         }
 
         /* --- Final CTA Section --- */
@@ -357,7 +377,7 @@
             <div class="pathway-diagram">
                 <div class="pathway-phase">
                     <h3>Phase 1: Conceive & Validate</h3>
-                    <p>Market Analysis<br>Feasibility Studies<br>Process Development</p>
+                    <p>• Market Analysis<br>• Feasibility Studies<br>• Process Development</p>
                 </div>
                 <div class="pathway-arrow">&rarr;</div>
                 <div class="pathway-phase">
@@ -367,7 +387,7 @@
                 <div class="pathway-arrow">&rarr;</div>
                 <div class="pathway-phase">
                     <h3>Phase 3: Develop & De-Risk</h3>
-                    <p>Technology Integration<br>Investor-Ready Business Cases<br>Project Roadmaps</p>
+                    <p>• Technology Integration<br>• Investor-Ready Business Cases<br>• Project Roadmaps</p>
                 </div>
             </div>
         </div>
@@ -380,15 +400,15 @@
              <div class="features-grid">
                 <div class="feature-item">
                     <h3>First Advantage</h3>
-                    <p>• Investment Certainty<br>• Data-driven decisions that reduce risks and ensure the highest return on investment.</p>
+                    <p><strong>Investment Certainty</strong><br>• Data-driven decisions that reduce risks and ensure the highest return on investment.</p>
                 </div>
                 <div class="feature-item">
                     <h3>Second Advantage</h3>
-                    <p>• Performance Efficiency<br>• Optimized designs to reduce capital and operational costs.</p>
+                    <p><strong>Performance Efficiency</strong><br>• Optimized designs to reduce capital and operational costs.</p>
                 </div>
                 <div class="feature-item">
                     <h3>Third Advantage</h3>
-                    <p>• Speed to Market<br>• Clear methodology that transforms ideas into executable projects quickly.</p>
+                    <p><strong>Speed to Market</strong><br>• Clear methodology that transforms ideas into executable projects quickly.</p>
                 </div>
             </div>
         </div>
