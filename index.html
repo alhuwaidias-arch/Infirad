@@ -149,28 +149,52 @@
         
         .pathway-diagram {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             margin-top: 60px;
             position: relative;
+            gap: 20px;
         }
         
         .pathway-phase {
             flex: 1;
             padding: 20px;
+            text-align: center;
+            position: relative;
         }
         
         .pathway-phase h3 {
             font-size: 1.8rem;
+            margin-bottom: 15px;
         }
         
         .pathway-phase p {
             font-size: 1rem;
+            text-align: right; /* Right align for Arabic RTL */
+            margin: 0;
+            padding: 0 50px 0 0; /* Right padding to create space */
+            line-height: 1.6;
+        }
+        
+        /* Custom bullet positioning for Arabic */
+        .pathway-phase p::before {
+            content: '';
+            position: absolute;
+            right: 35px; /* Position bullets under "ا" - adjusted for better alignment */
+            color: inherit;
+        }
+        
+        /* Specific adjustment for Phase 2 in Arabic */
+        .pathway-phase:nth-child(3) p::before {
+            right: 40px; /* Move Phase 2 bullets slightly right to match others */
         }
         
         .pathway-arrow {
             font-size: 3rem;
             color: var(--cool-gray);
+            flex-shrink: 0;
+            width: 60px;
+            text-align: center;
         }
 
         /* --- Final CTA Section --- */
@@ -357,17 +381,17 @@
             <div class="pathway-diagram">
                 <div class="pathway-phase">
                     <h3>المرحلة الأولى: التصور والتحقق</h3>
-                    <p>تحليل السوق<br>دراسة الجدوى<br>تطوير العملية</p>
+                    <p>• تحليل السوق<br>• دراسة الجدوى<br>• تطوير العملية</p>
                 </div>
                 <div class="pathway-arrow">&larr;</div>
                 <div class="pathway-phase">
                     <h3>المرحلة الثانية: المحاكاة والتحسين</h3>
-                    <p>محاكاة العملية<br>تحليل البيانات<br>خفض التكاليف</p>
+                    <p>• محاكاة العملية<br>• تحليل البيانات<br>• خفض التكاليف</p>
                 </div>
                 <div class="pathway-arrow">&larr;</div>
                 <div class="pathway-phase">
                     <h3>المرحلة الثالثة: التطوير والتجهيز</h3>
-                    <p>تكامل التقنيات<br>مشروع جاهز للاستثمار<br>خارطة الطريق</p>
+                    <p>• تكامل التقنيات<br>• مشروع جاهز للاستثمار<br>• خارطة الطريق</p>
                 </div>
             </div>
         </div>
@@ -380,15 +404,15 @@
              <div class="features-grid">
                 <div class="feature-item">
                     <h3>الميزة الأولى</h3>
-                    <p>• اليقين في الاستثمار<br>• قرارات مدعومة بالبيانات تقلل المخاطر وتضمن أعلى عائد على الاستثمار.</p>
+                    <p><strong>اليقين في الاستثمار</strong><br>• قرارات مدعومة بالبيانات تقلل المخاطر وتضمن أعلى عائد على الاستثمار.</p>
                 </div>
                 <div class="feature-item">
                     <h3>الميزة الثانية</h3>
-                    <p>• الكفاءة في الأداء<br>• تصاميم محسنة لخفض التكاليف الرأسمالية والتشغيلية.</p>
+                    <p><strong>الكفاءة في الأداء</strong><br>• تصاميم محسنة لخفض التكاليف الرأسمالية والتشغيلية.</p>
                 </div>
                 <div class="feature-item">
                     <h3>الميزة الثالثة</h3>
-                    <p>• سرعة الوصول للسوق<br>• منهجية واضحة تحول الأفكار إلى مشاريع قابلة للتنفيذ بسرعة.</p>
+                    <p><strong>سرعة الوصول للسوق</strong><br>• منهجية واضحة تحول الأفكار إلى مشاريع قابلة للتنفيذ بسرعة.</p>
                 </div>
             </div>
         </div>
